@@ -1,0 +1,25 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Access Denied - E-Commerce Store{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0">
+                <div class="card-body p-5 text-center">                    <h1 class="display-1 text-warning">403</h1>
+                    <h2 class="mb-4">Access Denied</h2>
+                    <p class="mb-4 text-muted">You don't have permission to access this page.</p>
+                    <img src="{% static 'img/idmax logo.png' %}" alt="Access Denied" class="img-fluid mb-4" style="max-width: 200px;" onerror="this.src='/static/img/idmax logo.png';">
+                    <div>
+                        <a href="{% url 'store:home' %}" class="btn btn-primary">
+                            <i class="fas fa-home me-2"></i> Back to Homepage
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
